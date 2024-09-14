@@ -140,6 +140,8 @@ export default function Game() {
             case 'down':
                 newSnakeHead.y += SNAKE_SPEED;
                 break;
+            default:
+                break;
         }
 
 
