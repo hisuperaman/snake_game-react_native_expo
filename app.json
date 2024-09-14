@@ -19,8 +19,7 @@
         "foregroundImage": "./assets/adaptive-icon.png",
         "backgroundColor": "#6fdb69"
       },
-      "package": "com.hisuperaman.SnakeGame",
-      "enableDangerousExperimentalLeanBuilds": true
+      "package": "com.hisuperaman.SnakeGame"
     },
     "web": {
       "favicon": "./assets/favicon.png"
@@ -29,6 +28,20 @@
       "eas": {
         "projectId": "93f633ec-5c48-4f29-b2e5-dc92ef06c444"
       }
-    }
+    },
+    "plugins": [
+      [
+        "expo-build-properties",
+        {
+          "android": {
+            "enableProguardInReleaseBuilds": true,
+            "enableShrinkResourcesInReleaseBuilds": true
+          },
+          "ios": {
+            
+          }
+        }
+      ]
+    ]
   }
 }
