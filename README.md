@@ -13,7 +13,7 @@ A simple and fun Snake game built with React Native and Expo. This project showc
 ## Screenshots
 
 ### 1. Screenshot
-![Screenshot1](./screenshots/screenshot1.jpg)
+<img src="./screenshots/screenshot1.jpg" alt="Screenshot" height="400"/>
 
 ## Technologies Used
 
