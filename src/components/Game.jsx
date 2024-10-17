@@ -12,6 +12,8 @@ import getIsGameover from "../utils/getIsGameover";
 
 import { Audio } from 'expo-av';
 import AsyncStorage from "@react-native-async-storage/async-storage";
+import { TouchableOpacity } from 'react-native-gesture-handler';
+import Ionicons from '@expo/vector-icons/Ionicons';
 
 
 const SNAKE_INITIAL_COORDINATES = { x: 30, y: 50 };
@@ -269,8 +271,10 @@ export default function Game() {
                     isGameover ?
                         <View style={styles.gameoverContainer}>
                             <Text style={styles.gameover}>Game over</Text>
-                            <Text>Press Restart button to play again</Text>
-                            <Text style={{ fontSize: 10 }}>(not the middle one 🤡)</Text>
+
+                            <TouchableOpacity onPress={handleReloadGame}>
+                                <Ionicons name="reload-circle" size={150} color="green" />
+                            </TouchableOpacity>
                         </View>
                         : ''
                 }
@@ -305,7 +309,7 @@ const styles = StyleSheet.create({
     gameover: {
         fontSize: 40,
         fontWeight: 'bold',
-        color: 'red'
+        color: 'green'
     }
 
 });
